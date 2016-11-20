@@ -2,7 +2,53 @@
 <head>
 <title>Hello World</title>
 <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Parisienne|Shrikhand|Indie+Flower" rel="stylesheet">
+<script>// external js: masonry.pkgd.js
 
+$('.grid').masonry({
+  itemSelector: '.grid-item',
+  columnWidth: 160
+});</script>
+	
+	<style>
+	
+	* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: #EEE;
+  max-width: 1200px;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  width: 160px;
+  height: 120px;
+  float: left;
+  background: #D26;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
+
+.grid-item--width2 { width: 320px; }
+.grid-item--width3 { width: 480px; }
+.grid-item--width4 { width: 640px; }
+
+.grid-item--height2 { height: 200px; }
+.grid-item--height3 { height: 260px; }
+.grid-item--height4 { height: 360px; }
+	</style>
 
 </head>
 <body style="background-color: #0ABAB5;">
@@ -30,7 +76,34 @@
     Although Boise is a place that's somewhat off-the-radar for many big city folks, I find that it's a vibrant little city surrounded by natural beauty and it's a great place to call home. <br><br> On this website I have included some pictures from a recent visit to "Freak Alley," an outdoor gallery
 	which was created by local artists in the heart of downtown off 8th Street and Idaho. I have also included some of my Pinterest boards as well as some images to download from the Public Domain which are free for commercial or personal use. There are quotes, poems, info about my favorite music artists links, and more. <br><br>
 	<center><img src="images/home2.jpg" width="500" height="375" alt="home" style="border: 10px; border-style: solid; border-color:#008080"></center>
-	<br><br></span>
+	<br><br></span><h1>Masonry - columnWidth</h1>
+
+<div class="grid">
+  <div class="grid-item"></div>
+  <div class="grid-item grid-item--width2 grid-item--height2"></div>
+  <div class="grid-item grid-item--height3"></div>
+  <div class="grid-item grid-item--height2"></div>
+  <div class="grid-item grid-item--width3"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item grid-item--height2"></div>
+  <div class="grid-item grid-item--width2 grid-item--height3"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item grid-item--height2"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item grid-item--width2 grid-item--height2"></div>
+  <div class="grid-item grid-item--width2"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item grid-item--height2"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item grid-item--height3"></div>
+  <div class="grid-item grid-item--height2"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item grid-item--height2"></div>
+</div>
+
 	<div align="left"><span style="font-family: 'Parisienne'; font-weight: bold; font-style: normal; text-decoration: underline; font-size: 18pt; color: #333399;">A Few of My Interests </span>  
      
 		<span style="font-family: 'Indie Flower'; font-weight: bold; font-style: normal;"> <ul>   
