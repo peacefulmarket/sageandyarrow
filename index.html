@@ -12,6 +12,11 @@ $(document).ready(function(){
         $(this).css("background-color", "pink");
         }, function(){
         $(this).css("background-color", "#000080");
+	    $(function() {
+  $('a').hover(
+   function() { $(this).animate( { backgroundColor: '#pink', color: '#000080' } ) },
+    );
+});
     });
 });
 	
