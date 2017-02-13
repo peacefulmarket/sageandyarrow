@@ -1,6 +1,128 @@
 <html>
 <head>
 <title>Hello World</title>
+	
+	    <link href="https://fonts.googleapis.com/css?family=Niconne|Aparey" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <title>Form</title>
+		<script>
+
+
+var html5_audiotypes={ 
+	"mp3": "audio/mpeg",
+	
+}
+
+function createsoundbite(sound){
+	var html5audio=document.createElement('audio')
+	if (html5audio.canPlayType){ //check support for HTML5 audio
+		for (var i=0; i<arguments.length; i++){
+			var sourceel=document.createElement('source')
+			sourceel.setAttribute('src', arguments[i])
+			if (arguments[i].match(/\.(\w+)$/i))
+				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+			html5audio.appendChild(sourceel)
+		}
+		html5audio.load()
+		html5audio.playclip=function(){
+			html5audio.pause()
+			html5audio.currentTime=0
+			html5audio.play()
+		}
+		return html5audio
+	}
+	else{
+		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
+	}
+}
+
+
+var mouseoversound=createsoundbite("https://sabercathost.com/8SlK/KeyChimes.mp3")
+
+</script>
+    <style type="text/css">
+    
+    body {
+      color:#000000;
+      background-color:#FFFFFF;
+	  font-family: 'Aparey', serif;
+	  font-size: 14px;
+      background-image:url('https://s25.postimg.org/7jxfititr/seigaiha.png');
+      background-repeat:repeat;
+	  
+    }
+	
+       </style>
+	   <style>
+	   
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+   margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;  
+    a:visited { color:#800080; }
+    a:hover { color:#8000FF; }
+    a:active { color:#0080FF; }
+  
+  
+}
+
+
+#wrap > .container {
+  padding: 60px 15px 0;
+}
+.container .credit {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+  
+  
+}
+
+</style>
+	   <style>
+	.form{
+    width: 400px;
+	height:700px;
+	 background:#14DCD2
+	 
+	 
+	     
+}
+.button {
+    background-color: #4CAF50; 
+    border: 2px;
+border-color:#008040;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	 -moz-box-shadow: 0 0 4px black;
+    -webkit-box-shadow: 0 0 4px black;
+    box-shadow: 0 0 4px black;
+		
+}
+.message {
+font-family: 'Niconne', cursive;
+
+}
+
+.outline {
+ -moz-box-shadow: 0 0 5px black;
+    -webkit-box-shadow: 0 0 5px black;
+    box-shadow: 0 0 5px black; }
+</style>
 	<style type="text/css">
 <!--
 .tab { margin-left: 10px; }
@@ -116,11 +238,7 @@ $(document).ready(function(){
     </li>
   </ul>
 </div></span>
-	<center>
-<a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/boisedoll/art-design/"></a>
-<a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/boisedoll/science-nature/"></a>
-<a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/boisedoll/vegan-food/"></a>	
-<a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/boisedoll/poetry-literature/"></a></center><br><br>
+	<br><br>
 	<span style="font-family: 'Parisienne'; font-weight: bold; font-style: normal; text-decoration: underline; 
 	     font-size: 18pt; color: #333399;">A Few of My Interests </span> 
   
@@ -152,20 +270,32 @@ $(document).ready(function(){
    <a name="local">Local</a><br>
   <a name="Links">Links</a></span><br> 
 	  <br><br><br>
-<div id="flickrembed"></div><div style="display: block; text-align: center; margin: 0 auto; font-family: 'Parisienne'; ">
-	 The above pictures are some nice/interesting images that I found on Flickr by searching images free for commercial use with no attribution necessary. 
-	  Feel free to use them for your projects if you like!</div>
+	<body>
+<center><br><div class="form outline";>
+<form action="mailto:sarahpdx@msn.com" method="POST"><br><img src="https://s25.postimg.org/wageg6a33/bluebranch.png" />
+<div class="row"><br><h1 class="message">Message Me!<i class="fa fa-comments-o" aria-hidden="true"></i></h1>
+	<label for="txt_Name" id="Name-ariaLabel">Your Name</label><br>
+	<input id="txt_Name" name="txt_Name" type="text" aria-labelledby="Name-ariaLabel" placeholder="Name" />
+</div><br>
+<div class="row">
+	<fieldset>
+		<legend>Importance</legend>
+		<span><input value="High" id="rad_Importance_1" name="rad_Importance" type="radio" aria-labelledby="Importance-ariaLabel1" /> <label for="rad_Importance_1" id="Importance-ariaLabel1">High</label></span>
+ 		<span><input value="Normal" id="rad_Importance_2" name="rad_Importance" type="radio" aria-labelledby="Importance-ariaLabel2" /> <label for="rad_Importance_2" id="Importance-ariaLabel2">Normal</label></span>
+ 		<span><input value="Low" id="rad_Importance_3" name="rad_Importance" type="radio" aria-labelledby="Importance-ariaLabel3" /> <label for="rad_Importance_3" id="Importance-ariaLabel3">Low</label></span>
+ 	</fieldset>
+</div><br>
+<div class="row">
+	<label for="txtarea_Blog" id="Blog-ariaLabel"></label><br>
+	<textarea id="txtarea_Blog" name="txtarea_Blog" cols="40" rows="10" aria-labelledby="Blog-ariaLabel"></textarea>
+</div><br>
+<div class="row">
+<input type="submit" name="submit" value="Submit" class="button" onmouseover="mouseoversound.playclip()"/>
 
-<div style="display: block; text-align: center; margin: 10px;"><script src="https://flickrembed.com/embed_v2.js.php?source=flickr&layout=responsive&input=www.flickr.com/photos/131860086@N06/&sort=0&by=user&theme=default&scale=fit&skin=default&id=583338b0184aa">
-	</script>
-	<style>
+
+</div>
+</form></div>
+
+
+
 	
-	footer.absolute {
-    position: absolute;
-    bottom: 0px;
-    width: 250px;
-    height: 24px;
-    }
-	</style>
-	<footer><a href="mailto:sarahpdx@msn.com"><img src="https://s25.postimg.org/pled2tp5b/sarahrose.png"></a></footer>
-	  <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
